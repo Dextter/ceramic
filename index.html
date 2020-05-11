@@ -26,6 +26,24 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript">
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "<sender’s email address>",
+        Password: "<email password>",
+        To: '<recipient’s email address>',
+        From: "<sender’s email address>",
+        Subject: "<email subject>",
+        Body: "<email body>",
+      })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+    }
+  </script>
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -226,7 +244,7 @@
             <h2 class="text-black">Consulte os resultados das vendas de forma prática</h2>
             <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque nisi architecto
               autem molestias corrupti officia veniam</p> -->
-           
+
           </div>
         </div>
 
@@ -239,7 +257,7 @@
             <!-- <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque nisi architecto
               autem molestias corrupti officia veniam.</p> -->
 
-          
+
           </div>
         </div>
 
@@ -270,9 +288,11 @@
           </div>
           <div class="col-lg-4 ml-auto pl-lg-5">
             <h2 class="text-black mb-4 h3 font-weight-bold">Nosso objetivo</h2>
-            <p class="mb-4">Objetivo do Ceramic é fornecer aos clientes uma ferramenta em software para auxílio no gerenciamento dos recursos gerais da empresa. 
-              Permitindo uma melhor organização dos recursos materiais, humanos e financeiros da empresa, além de proporcionar uma boa experiência de uso por meio de uma
-               interface de fácil manuseio.</p>                        
+            <p class="mb-4">Objetivo do Ceramic é fornecer aos clientes uma ferramenta em software para auxílio no
+              gerenciamento dos recursos gerais da empresa.
+              Permitindo uma melhor organização dos recursos materiais, humanos e financeiros da empresa, além de
+              proporcionar uma boa experiência de uso por meio de uma
+              interface de fácil manuseio.</p>
           </div>
         </div>
       </div>
@@ -398,33 +418,39 @@
         <div class="row justify-content-center">
           <div class="col-lg-7 mb-5">
 
-
-
-            <form action="#" class="p-5 bg-white">
-
-              <h2 class="h4 text-black mb-5">Contato: </h2>
+            <form action="mailto:comercial@ceramic.com.br" method="post" enctype="text/plain" class="p-5 bg-white">              
 
               <div class="row form-group">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">Primeiro nome</label>
-                  <input type="text" id="fname" class="form-control rounded-0">
-                </div>
-                <div class="col-md-6">
-                  <label class="text-black" for="lname">Ultimo nome</label>
-                  <input type="text" id="lname" class="form-control rounded-0">
+                <div class="col-md-8 mb-3 mb-md-0">
+                  <label class="text-black" for="message">Suporte</label><br />
+                  Albert de Almeida Morato<br />
+                  Contato: 55 84 99137-6576<br />
+                  albert.morato@ceramic.com.br<br />
                 </div>
               </div>
 
               <div class="row form-group">
+                <div class="col-md-8 mb-3 mb-md-0">
+                  <label class="text-black" for="message">Suporte</label><br />
+                  Hugo Pablo Tomas de Araujo<br />
+                  Contato: 55 84 991261979<br />
+                  hugo.pablo@ceramic.com.br<br />
+                </div>
+              </div>
 
+              <div class="row form-group">
                 <div class="col-md-12">
-                  <label class="text-black" for="email">Email</label>
-                  <input type="email" id="email" class="form-control rounded-0">
+                  <label class="text-black" for="message">Comercial</label><br />
+                  Carlos Vinicius Costa Lima<br />
+                  Contato: 55 84 98114-0000<br />
+                  viniciuscostalima@gmail.com<br />
                 </div>
               </div>
 
-
               <div class="row form-group">
+
+
+                <!-- <div class="row form-group">
                 <div class="col-md-12">
                   <label class="text-black" for="message">Mensagem</label>
                   <textarea name="message" id="message" cols="30" rows="7" class="form-control rounded-0"
@@ -436,7 +462,7 @@
                 <div class="col-md-12">
                   <input type="submit" value="Enviar" class="btn btn-primary mr-2 mb-2">
                 </div>
-              </div>
+              </div> -->
 
 
             </form>
@@ -465,8 +491,8 @@
             <p class="mb-0">
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy;
-              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com"
-                target="_blank">Colorlib</a>
+              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by
+              <a href="https://colorlib.com" target="_blank">Colorlib</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
